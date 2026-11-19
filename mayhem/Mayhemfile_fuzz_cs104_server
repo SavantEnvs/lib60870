@@ -1,0 +1,9 @@
+project: savantenvs/lib60870
+target: fuzz_cs104_server
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_cs104_server/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_cs104_server
+    libfuzzer: true
+    timeout: 5

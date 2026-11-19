@@ -1,0 +1,9 @@
+project: savantenvs/lib60870
+target: fuzz_cs101_slave_unbalanced
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_cs101_slave_unbalanced/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_cs101_slave_unbalanced
+    libfuzzer: true
+    timeout: 5
